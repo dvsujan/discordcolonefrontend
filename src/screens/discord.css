@@ -1,0 +1,89 @@
+.discordpage{ 
+    height:100vh ; 
+    display:flex; 
+    overflow:hidden; 
+}
+.servers{
+    height:100vh;  
+    flex:.9; 
+    overflow-y: scroll; 
+    background-color:#202225; 
+}
+
+.servers::-webkit-scrollbar {
+  display: none;
+}
+
+.channels{ 
+    height:100vh;  
+    flex:2.6; 
+    overflow-y: scroll; 
+    background-color: #2F3136;
+    display:flex ;
+    flex-direction:column;
+}
+
+.channels::-webkit-scrollbar {
+  display: none;
+}
+.messages{ 
+    height:100vh;  
+    flex:12; 
+    background-color: #36393F; 
+  }
+
+.messages::-webkit-scrollbar {
+  display: none;
+}
+.users{ 
+    height:100vh;  
+    flex:3; 
+    overflow-y: scroll; 
+    background-color:#2F3136;  
+    flex-direction: column;
+}
+
+.users::-webkit-scrollbar {
+  display: none;
+}
+
+.textChannels{ 
+  flex: 1; 
+  overflow-y: scroll; 
+}
+.voiceChannels::-webkit-scrollbar {
+  display: none;
+}
+.voiceChannels{ 
+  flex:1 ; 
+  overflow-y: scroll; 
+  border-top: 1px solid black ; 
+}
+.textChannels::-webkit-scrollbar {
+  display: none;
+}
+.ibar{ 
+  color:#DCDDDE ; 
+  padding-left:5px; 
+}
+.txtnav{ 
+  display:flex; 
+  flex-direction: row;
+  align-items: center;
+}
+.txtnav p{ 
+  flex:.6; 
+}
+.adduser{
+  flex:.2;
+}
+.adduser img{
+  width:35%; 
+}
+
+.createchannel{ 
+  flex:.2; 
+}
+.createchannel img{ 
+  width:35%; 
+}

@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{useState, useEffect} from 'react';
+import Bgimg from './assets/discordBackground.jpg'
+import {BrowserRouter as Router , Switch, Route, Link, Redirect} from 'react-router-dom'; 
+import LoginScreen from './screens/LoginScreen'; 
+import RegisterScreen from './screens/RegisterScreen';
+import Discord from './screens/Discord'
+import LandingPage from './screens/LandingPage';
+import {SocketContext, socket} from './context/socket';
 
 function App() {
+  const [loggedIn, setLoggedIn] = useState(false); 
+  const getIsLoggedIn = async ()=>{ 
+    if(sessionStorage.getItem('token')){ 
+      setLoggedIn(true); 
+    }
+  } 
+  useEffect(()=>{ 
+    getIsLoggedIn();
+  },[]) 
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+      <SocketContext.Provider value={socket}> 
+      <Router>
+        <div className="app"> 
+        <Switch>
+        <Route exact path='/'>
+          <LandingPage/> 
+        </Route> 
+        <Route exact path='/login'>
+          {loggedIn ? <Redirect to="/app" /> : <LoginScreen/>} 
+        </Route>
+        <Route exact path='/register'>
+          {loggedIn ? <Redirect to="/app" /> : <RegisterScreen/>} 
+        </Route> 
+       <Route path='/app' component={Discord}/>
+        </Switch>
+        </div> 
+      </Router>
+      </SocketContext.Provider> 
+   );
 }
 
 export default App;

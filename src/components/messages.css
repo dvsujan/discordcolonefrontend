@@ -1,0 +1,68 @@
+.messagesPage{ 
+	display:flex; 
+	flex-direction: column;
+	height:100%;
+}
+
+.messagebox{ 
+	flex:8; 	
+	overflow-y: scroll; 
+}
+
+.chatbox{ 
+	flex:1; 
+	display:flex ; 
+	align-items:center;
+	justify-content:center;
+	flex-direction:row ; 
+}
+.chatform{ 
+	flex:7; 
+}
+
+.chatform input{ 
+	width:95%; 
+	height:4vh ;
+	background-color: #40444B;
+	border:none ;
+	margin-left:10px ; 
+}
+
+.sendbtn{ 
+	flex:1 ; 
+}
+.sendbtn button{ 
+	padding:10% ; 
+	margin-left:20%;  
+}
+
+.message{ 
+	color:white; 
+}
+.nomessages{ 
+	display:flex;
+	height:100vh; 	
+	align-items:center; 
+	justify-content:center; 
+	flex-direction: column;
+	color:#72767D; 
+	font-weight:500; 
+	background-color:#202225; 
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 1px #111110; 
+  border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #202225; 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #202225; 
+}

@@ -1,0 +1,24 @@
+
+.channelc{ 
+    display:flex ; 
+    flex-direction:row;  
+    justify-content:center ;
+    align-items:center;  
+}
+.channelc:hover{ 
+    background-color:#34373C   ;  
+}
+.channeli{
+    flex:1 ; 
+}
+.channeli svg{ 
+    width:50%; 
+}
+.channeli img{ 
+    height:50%; 
+}
+
+.channelt{ 
+    flex:5; 
+    font-size:12px ; 
+}

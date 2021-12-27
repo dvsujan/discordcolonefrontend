@@ -1,0 +1,109 @@
+.landingpage{
+    display:flex; 
+    height:350vh; 
+    border: none;
+    flex-direction: column;
+}
+
+.sec1{ 
+    flex:6; 
+    background-color: #404EED;
+    display:flex;
+    align-items:center;
+    justify-content:center; 
+    flex-direction:column;
+    overflow-x: hidden;
+    background-image: url(./assets/1.svg);
+
+}
+
+.sec2{ 
+    flex:6;
+    display:flex ;
+    align-items:center;
+    justify-content:center; 
+}
+
+.sec3{ 
+    flex:6; 
+    background-color: #F6F6F6;
+    display:flex ;
+    align-items:center;
+    justify-content:center;  
+}
+.sec4{ 
+    flex:6; 
+    background-color:white; 
+    background-image:url(./assets/nitro.PNG); 
+    color:white; 
+}
+.landingh{ 
+    color:white;
+    font-size: 50px; 
+}
+
+
+.landingp{ 
+    color:white ; 
+    width:50% ; 
+    font-size: 18px;
+}
+
+.landingbtn{ 
+    background-color:#0A0A0C; 
+    border:none ; 
+    padding:20px; 
+    border-radius:40px ; 
+    color:white ; 
+    font-size:15px; 
+}
+.landingbtn:hover{ 
+    background-color:#36393F;
+    transition:0.2em;  
+    box-shadow: 10px 10px 8px #0A0A0C;
+}
+.leftbtmimg{ 
+    position:absolute;
+    width:60% ; 
+    height:50%; 
+    bottom: 100px;
+    right: -350px;
+}
+.rightbtmimg{ 
+    position:absolute;
+    width:60% ; 
+    height:50%; 
+    bottom: 100px;
+    left: -350px;
+}
+
+.sec2img{ 
+    flex:1 ;
+}
+
+.sec2info{ 
+    flex:1 ; 
+    color:#23272A ; 
+    padding:5%;  
+}
+
+.sec2info h1{ 
+    font-size:40px ;
+    width:50%; 
+}
+.sec2info p{ 
+    font-size:20px ; 
+    width:50%;  
+}
+
+.sec5info{ 
+    display:flex;
+    flex-direction: column; 
+    padding-top:10%; 
+    padding-left:10%; 
+}
+
+.sec4 img{ 
+    width:10%; 
+    height:5%; 
+}
